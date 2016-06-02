@@ -1,0 +1,201 @@
+[
+    {
+        "outputFile": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 49,
+                    "endOffset": 100
+                },
+                "from": {
+                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 49,
+                        "endOffset": 104
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 46,
+                    "endOffset": 147
+                },
+                "from": {
+                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 274,
+                        "endColumn": 46,
+                        "endOffset": 316
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 152,
+                    "endColumn": 52,
+                    "endOffset": 200
+                },
+                "from": {
+                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 110,
+                        "endColumn": 52,
+                        "endOffset": 158
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 205,
+                    "endColumn": 50,
+                    "endOffset": 251
+                },
+                "from": {
+                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 164,
+                        "endColumn": 50,
+                        "endOffset": 210
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 256,
+                    "endColumn": 56,
+                    "endOffset": 308
+                },
+                "from": {
+                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 216,
+                        "endColumn": 56,
+                        "endOffset": 268
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 313,
+                    "endColumn": 48,
+                    "endOffset": 357
+                },
+                "from": {
+                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 322,
+                        "endColumn": 48,
+                        "endOffset": 366
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 362,
+                    "endColumn": 49,
+                    "endOffset": 407
+                },
+                "from": {
+                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 372,
+                        "endColumn": 49,
+                        "endOffset": 417
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 412,
+                    "endColumn": 60,
+                    "endOffset": 468
+                },
+                "from": {
+                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 423,
+                        "endColumn": 60,
+                        "endOffset": 479
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 473,
+                    "endLine": 16,
+                    "endColumn": 12,
+                    "endOffset": 759
+                },
+                "from": {
+                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 191,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 481
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 764,
+                    "endLine": 19,
+                    "endColumn": 12,
+                    "endOffset": 919
+                },
+                "from": {
+                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 522,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 679
+                    }
+                }
+            }
+        ]
+    }
+]
