@@ -1,20 +1,29 @@
 package com.example.guardardatos;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-import android.app.Activity;
-import android.content.Intent;
+import android.os.storage.StorageManager;
+import android.os.storage.StorageVolume;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 public class FileActivity extends Activity {
+
+	final int GUARDA = 1;
+	final int RECUPERA = 2;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +37,7 @@ public class FileActivity extends Activity {
 		
 		try {
 			//interno, privado a la aplicación y de acceso protegido
-			File f = new File(getFilesDir(), "myfile.txt");
+//			File f = new File(getFilesDir(), "myfile.txt");
 			
 			//externo, privado a la aplicación, pero NO protegido
 			//null puede reemplazarse por una constante en: Environment.DIRECTORY_...
@@ -36,13 +45,13 @@ public class FileActivity extends Activity {
 
 			//externo y público. Acceso NO protegido
 			//el parámetro debe ser una constante en: Environment.DIRECTORY_...
-//			File f = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "myfile.txt");			
-			
-			Toast.makeText(this, f.getPath(), Toast.LENGTH_LONG).show();
-			
-	        FileOutputStream fos = new FileOutputStream(f);
-			fos.write(msg.getBytes());
-			fos.close();
+
+
+			StorageManager sm = (StorageManager)getSystemService(Context.STORAGE_SERVICE);
+			StorageVolume volume = sm.getPrimaryStorageVolume();
+			Intent intent = volume.createAccessIntent(Environment.DIRECTORY_DOWNLOADS);
+			startActivityForResult(intent, GUARDA);
+
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -52,15 +61,15 @@ public class FileActivity extends Activity {
 	public void recuperaMensaje(View v) {
 		try {
 			//interno, privado a la aplicación y de acceso protegido
-			File f = new File(getFilesDir(), "myfile.txt");
-			
+//			File f = new File(getFilesDir(), "myfile.txt");
+
 			//externo, privado a la aplicación, pero NO protegido
 			//null puede reemplazarse por una constante en: Environment.DIRECTORY_...
 //			File f = new File(getExternalFilesDir(null), "myfile.txt");
-
+//
 			//externo y público. Acceso NO protegido
 			//el parámetro debe ser una constante en: Environment.DIRECTORY_...
-//			File f = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "myfile.txt");	
+			File f = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "myfile.txt");
 
 			FileInputStream fis = new FileInputStream(f);
 			byte[] buffer = new byte[(int)f.length()];
@@ -74,7 +83,34 @@ public class FileActivity extends Activity {
 		}		
 		
 	}
-	
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+
+		if(resultCode == Activity.RESULT_CANCELED) {
+			Log.e("RESULT_CANCELED", "El usuario canceló: NO otorga permiso");
+			return;
+		}
+		if(requestCode == GUARDA) {
+			try {
+
+				File f = new File(data.getData().toString(), "myfile.txt");
+				Toast.makeText(this, f.getPath(), Toast.LENGTH_LONG).show();
+				f.createNewFile();
+				FileOutputStream fos = new FileOutputStream(f);;
+				EditText edit = (EditText) findViewById(R.id.msg);
+				String msg = edit.getText().toString();
+				fos.write(msg.getBytes());
+				fos.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+		}
+
+	}
+
 	public void espacioDisco(View view) {
 		long tot_interno = getFilesDir().getTotalSpace() / (1024 * 1024);
 		long tot_externo = getExternalFilesDir(null).getTotalSpace() / (1024 * 1024);

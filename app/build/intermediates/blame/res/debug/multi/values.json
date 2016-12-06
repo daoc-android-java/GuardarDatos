@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "outputFile": "C:\\Users\\diego\\GitHub\\Android\\GuardarDatos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 100
                 },
                 "from": {
-                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\diego\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 147
                 },
                 "from": {
-                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\diego\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 200
                 },
                 "from": {
-                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\diego\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 251
                 },
                 "from": {
-                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\diego\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 308
                 },
                 "from": {
-                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\diego\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 357
                 },
                 "from": {
-                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\diego\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 407
                 },
                 "from": {
-                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\diego\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 468
                 },
                 "from": {
-                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "C:\\Users\\diego\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -164,14 +164,14 @@
                     "endOffset": 759
                 },
                 "from": {
-                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "C:\\Users\\diego\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 191,
+                        "startOffset": 192,
                         "endLine": 12,
                         "endColumn": 12,
-                        "endOffset": 481
+                        "endOffset": 484
                     }
                 }
             },
@@ -185,14 +185,14 @@
                     "endOffset": 919
                 },
                 "from": {
-                    "file": "C:\\Users\\dordonez\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "C:\\Users\\diego\\GitHub\\Android\\GuardarDatos\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 522,
+                        "startOffset": 525,
                         "endLine": 17,
                         "endColumn": 12,
-                        "endOffset": 679
+                        "endOffset": 682
                     }
                 }
             }
