@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="eacdb1540dcb3555b579c3f020cdf4e264de2556">
+        sha1="e34d499b872da1ebdcd0d535a007e1012f18bcc8">
         <dex dex="C:\Users\diego\GitHub\Android\GuardarDatos\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_63c2a8ffe441de00b9da3d996d4eae1f41b72961\classes.dex" />
     </item>
     <item
@@ -43,7 +43,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="5983f94a1471d4df24b4bb166c6e949a23dcf091">
+        sha1="aa66aca9eacfda8d6944ff5390f0ebf62eed06cf">
         <dex dex="C:\Users\diego\GitHub\Android\GuardarDatos\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_e47adf2f5c51f6264abb8410d2d99377c548e4c7\classes.dex" />
     </item>
 

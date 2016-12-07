@@ -15,13 +15,19 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f070000;
-        public static final int espacio=0x7f070004;
-        public static final int guarda=0x7f070002;
-        public static final int menu_bundle=0x7f070005;
-        public static final int menu_file=0x7f070007;
-        public static final int menu_prefs=0x7f070006;
+        public static final int espacio=0x7f070008;
+        public static final int guarda=0x7f070009;
+        public static final int guardaPrivExt=0x7f070003;
+        public static final int guardaPrivInt=0x7f070002;
+        public static final int guardaPubExt=0x7f070004;
+        public static final int menu_bundle=0x7f07000b;
+        public static final int menu_file=0x7f07000d;
+        public static final int menu_prefs=0x7f07000c;
         public static final int msg=0x7f070001;
-        public static final int muestra=0x7f070003;
+        public static final int muestra=0x7f07000a;
+        public static final int recuperaPrivExt=0x7f070006;
+        public static final int recuperaPrivInt=0x7f070005;
+        public static final int recuperaPubExt=0x7f070007;
     }
     public static final class layout {
         public static final int activity_file=0x7f030000;

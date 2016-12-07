@@ -31,57 +31,106 @@ public class FileActivity extends Activity {
 		setContentView(R.layout.activity_file);
 	}
 
-	public void guardaMensaje(View v) {
+	public void guardaPrivInt(View v) {
 		EditText edit = (EditText) findViewById(R.id.msg);
 		String msg = edit.getText().toString();
-		
 		try {
 			//interno, privado a la aplicación y de acceso protegido
-//			File f = new File(getFilesDir(), "myfile.txt");
-			
-			//externo, privado a la aplicación, pero NO protegido
-			//null puede reemplazarse por una constante en: Environment.DIRECTORY_...
-//			File f = new File(getExternalFilesDir(null), "myfile.txt");
-
-			//externo y público. Acceso NO protegido
-			//el parámetro debe ser una constante en: Environment.DIRECTORY_...
-
-
-			StorageManager sm = (StorageManager)getSystemService(Context.STORAGE_SERVICE);
-			StorageVolume volume = sm.getPrimaryStorageVolume();
-			Intent intent = volume.createAccessIntent(Environment.DIRECTORY_DOWNLOADS);
-			startActivityForResult(intent, GUARDA);
-
-			
-		} catch (Exception e) {
+			File f = new File(getFilesDir(), "privInt.txt");
+			Toast.makeText(this, f.getPath(), Toast.LENGTH_LONG).show();
+			f.createNewFile();
+			FileOutputStream fos = new FileOutputStream(f);
+			fos.write(msg.getBytes());
+			fos.close();
+		}catch(IOException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void recuperaMensaje(View v) {
+	public void guardaPrivExt(View v) {
+		EditText edit = (EditText) findViewById(R.id.msg);
+		String msg = edit.getText().toString();
 		try {
-			//interno, privado a la aplicación y de acceso protegido
-//			File f = new File(getFilesDir(), "myfile.txt");
-
 			//externo, privado a la aplicación, pero NO protegido
 			//null puede reemplazarse por una constante en: Environment.DIRECTORY_...
-//			File f = new File(getExternalFilesDir(null), "myfile.txt");
-//
-			//externo y público. Acceso NO protegido
-			//el parámetro debe ser una constante en: Environment.DIRECTORY_...
-			File f = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "myfile.txt");
+			File f = new File(getExternalFilesDir(null), "privExt.txt");
+			Toast.makeText(this, f.getPath(), Toast.LENGTH_LONG).show();
+			f.createNewFile();
+			FileOutputStream fos = new FileOutputStream(f);
+			fos.write(msg.getBytes());
+			fos.close();
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
 
+	public void guardaPubExt(View v) {
+		EditText edit = (EditText) findViewById(R.id.msg);
+		String msg = edit.getText().toString();
+		try {
+			//externo y público. Acceso NO protegido
+			//solicitar permiso al usuario
+			StorageManager sm = (StorageManager)getSystemService(Context.STORAGE_SERVICE);
+			StorageVolume volume = sm.getPrimaryStorageVolume();
+				//el parámetro DEBE ser una constante en: Environment.DIRECTORY_...
+			Intent intent = volume.createAccessIntent(Environment.DIRECTORY_DOWNLOADS);
+			startActivityForResult(intent, GUARDA);
+
+
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void recuperaPrivInt(View v) {
+		EditText edit = (EditText) findViewById(R.id.msg);
+		String msg = edit.getText().toString();
+		try {
+			//interno, privado a la aplicación y de acceso protegido
+			File f = new File(getFilesDir(), "privInt.txt");
 			FileInputStream fis = new FileInputStream(f);
 			byte[] buffer = new byte[(int)f.length()];
 			fis.read(buffer);
 			fis.close();
-
 			Toast.makeText(this, new String(buffer), Toast.LENGTH_LONG).show();
-			
-		} catch (Exception e) {
+		}catch(IOException e) {
 			e.printStackTrace();
-		}		
-		
+		}
+	}
+
+	public void recuperaPrivExt(View v) {
+		EditText edit = (EditText) findViewById(R.id.msg);
+		String msg = edit.getText().toString();
+		try {
+			//externo, privado a la aplicación, pero NO protegido
+			//null puede reemplazarse por una constante en: Environment.DIRECTORY_...
+			File f = new File(getExternalFilesDir(null), "privExt.txt");
+			FileInputStream fis = new FileInputStream(f);
+			byte[] buffer = new byte[(int)f.length()];
+			fis.read(buffer);
+			fis.close();
+			Toast.makeText(this, new String(buffer), Toast.LENGTH_LONG).show();
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void recuperaPubExt(View v) {
+		EditText edit = (EditText) findViewById(R.id.msg);
+		String msg = edit.getText().toString();
+		try {
+			//externo y público. Acceso NO protegido
+			//solicitar permiso al usuario
+			StorageManager sm = (StorageManager)getSystemService(Context.STORAGE_SERVICE);
+			StorageVolume volume = sm.getPrimaryStorageVolume();
+			//el parámetro DEBE ser una constante en: Environment.DIRECTORY_...
+			Intent intent = volume.createAccessIntent(Environment.DIRECTORY_DOWNLOADS);
+			startActivityForResult(intent, RECUPERA);
+
+
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -94,7 +143,6 @@ public class FileActivity extends Activity {
 		}
 		if(requestCode == GUARDA) {
 			try {
-
 				File f = new File(data.getData().toString(), "myfile.txt");
 				Toast.makeText(this, f.getPath(), Toast.LENGTH_LONG).show();
 				f.createNewFile();
