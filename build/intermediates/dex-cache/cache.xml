@@ -3,48 +3,48 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\diego\GitHub\Android\GuardarDatos\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="e34d499b872da1ebdcd0d535a007e1012f18bcc8">
-        <dex dex="C:\Users\diego\GitHub\Android\GuardarDatos\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_63c2a8ffe441de00b9da3d996d4eae1f41b72961\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\diego\GitHub\Android\GuardarDatos\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="C:\Users\diego\GitHub\Android\GuardarDatos\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_6199f13f737e21d8a00f5d74bc3fd62448b26f74\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\diego\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="C:\Users\diego\GitHub\Android\GuardarDatos\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_42f00556b4aaf5232a55b939c62e2039c7b4f0ae\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\diego\GitHub\Android\GuardarDatos\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jar="C:\Users\dordonez\GitHub\Android\GuardarDatos\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="C:\Users\diego\GitHub\Android\GuardarDatos\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_3ce8a9ac8ecf7e424de9f23f439df842fa820082\classes.dex" />
+        <dex dex="C:\Users\dordonez\GitHub\Android\GuardarDatos\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_acbacc020ff2cf015b82d01727fb881052bfb421\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\diego\GitHub\Android\GuardarDatos\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\dordonez\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="aa66aca9eacfda8d6944ff5390f0ebf62eed06cf">
-        <dex dex="C:\Users\diego\GitHub\Android\GuardarDatos\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_e47adf2f5c51f6264abb8410d2d99377c548e4c7\classes.dex" />
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\dordonez\GitHub\Android\GuardarDatos\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_b8d8e800fae55878057a5d5f758d7d9fa41c95ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\dordonez\GitHub\Android\GuardarDatos\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="892409c7b2c9ec748b7d9fc78d539ac722f2b90d">
+        <dex dex="C:\Users\dordonez\GitHub\Android\GuardarDatos\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ab884d58eee3d51c5b1670c17d51772de76d5c5b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\dordonez\GitHub\Android\GuardarDatos\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2548f210dd8e45252299c3084a94c67bfca067fe">
+        <dex dex="C:\Users\dordonez\GitHub\Android\GuardarDatos\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_fe13f6bd018590c769ac7f471a6af7a944825f37\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\dordonez\GitHub\Android\GuardarDatos\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\dordonez\GitHub\Android\GuardarDatos\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_7480d4499be572e6a3072681506df9db1aa2be9b\classes.dex" />
     </item>
 
 </items>

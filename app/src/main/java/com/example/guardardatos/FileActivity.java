@@ -15,10 +15,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileDescriptor;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class FileActivity extends Activity {
 
@@ -69,13 +72,11 @@ public class FileActivity extends Activity {
 		String msg = edit.getText().toString();
 		try {
 			//externo y público. Acceso NO protegido
-			//solicitar permiso al usuario
-			StorageManager sm = (StorageManager)getSystemService(Context.STORAGE_SERVICE);
-			StorageVolume volume = sm.getPrimaryStorageVolume();
-				//el parámetro DEBE ser una constante en: Environment.DIRECTORY_...
-			Intent intent = volume.createAccessIntent(Environment.DIRECTORY_DOWNLOADS);
+			Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+			intent.addCategory(Intent.CATEGORY_OPENABLE);//muestra solo contenido que se puede "abrir" (archivos)
+			intent.setType("text/plain");//crea archivo con el tipo MIME indicado
+			intent.putExtra(Intent.EXTRA_TITLE, "pubExt.txt");//esto lo puede cambiar el usuario en el cuadro de diálogo
 			startActivityForResult(intent, GUARDA);
-
 
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -120,13 +121,10 @@ public class FileActivity extends Activity {
 		String msg = edit.getText().toString();
 		try {
 			//externo y público. Acceso NO protegido
-			//solicitar permiso al usuario
-			StorageManager sm = (StorageManager)getSystemService(Context.STORAGE_SERVICE);
-			StorageVolume volume = sm.getPrimaryStorageVolume();
-			//el parámetro DEBE ser una constante en: Environment.DIRECTORY_...
-			Intent intent = volume.createAccessIntent(Environment.DIRECTORY_DOWNLOADS);
+			Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+			intent.addCategory(Intent.CATEGORY_OPENABLE);//muestra solo contenido que se puede "abrir" (archivos)
+			intent.setType("text/plain");//muestra solo archivos con el tipo MIME indicado
 			startActivityForResult(intent, RECUPERA);
-
 
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -143,19 +141,30 @@ public class FileActivity extends Activity {
 		}
 		if(requestCode == GUARDA) {
 			try {
-				File f = new File(data.getData().toString(), "myfile.txt");
-				Toast.makeText(this, f.getPath(), Toast.LENGTH_LONG).show();
-				f.createNewFile();
-				FileOutputStream fos = new FileOutputStream(f);;
 				EditText edit = (EditText) findViewById(R.id.msg);
 				String msg = edit.getText().toString();
-				fos.write(msg.getBytes());
-				fos.close();
+
+				FileDescriptor f = getContentResolver().openFileDescriptor(data.getData(), "w").getFileDescriptor();
+				PrintWriter pw = new PrintWriter(new FileOutputStream(f), true);
+				pw.println(msg);
+				pw.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-
+		} else if(requestCode == RECUPERA) {
+		try {
+			String msg = "";
+			FileDescriptor f = getContentResolver().openFileDescriptor(data.getData(), "r").getFileDescriptor();
+			Scanner scan = new Scanner(new FileInputStream(f));
+			while (scan.hasNextLine()) {
+				msg += scan.nextLine();
+			}
+			scan.close();
+			Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
+	}
 
 	}
 
