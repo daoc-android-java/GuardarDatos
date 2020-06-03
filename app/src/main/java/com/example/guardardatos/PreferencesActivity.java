@@ -48,9 +48,6 @@ public class PreferencesActivity extends Activity {
 	    // Handle item selection
 		Intent intent = null;
 	    switch (item.getItemId()) {
-	        case R.id.menu_bundle:
-	        	intent = new Intent(this, BundleActivity.class);
-	            break;
 	        case R.id.menu_prefs:
 	        	intent = new Intent(this, PreferencesActivity.class);
 	            break;	            
