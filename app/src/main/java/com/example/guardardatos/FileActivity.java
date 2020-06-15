@@ -25,7 +25,6 @@ public class FileActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_file);
-		pidePermiso();
 	}
 
 	public void guardaPrivInt(View v) {
@@ -65,6 +64,7 @@ public class FileActivity extends Activity {
 		EditText edit = (EditText) findViewById(R.id.msg);
 		String msg = edit.getText().toString();
 		try {
+			pidePermiso();
 			//externo y público. Acceso NO protegido
 			File f = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "pubExt.txt");
 			Toast.makeText(this, f.getPath(), Toast.LENGTH_LONG).show();
@@ -114,6 +114,7 @@ public class FileActivity extends Activity {
 		EditText edit = (EditText) findViewById(R.id.msg);
 		String msg = edit.getText().toString();
 		try {
+			pidePermiso();
 			//externo y público. Acceso NO protegido
 			File f = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "pubExt.txt");
 			FileInputStream fis = new FileInputStream(f);
